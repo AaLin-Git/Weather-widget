@@ -1,4 +1,16 @@
+import {
+	renderWidgetForecasts,
+	renderWidgetOther,
+	renderWidgetToday,
+} from "./render.js";
+
 export const startWidget = () => {
-  const widget = document.createElement('div');
-	return "hello";
+	const widget = document.createElement("div");
+	widget.classList.add("widget");
+
+	renderWidgetToday(widget);
+	renderWidgetOther(widget);
+	renderWidgetForecasts(widget);
+
+	return widget;
 };
